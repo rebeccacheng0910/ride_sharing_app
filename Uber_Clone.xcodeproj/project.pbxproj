@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		86A2FCE42545DAC400BA9898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FCE32545DAC400BA9898 /* AppDelegate.swift */; };
 		86A2FCE62545DAC400BA9898 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FCE52545DAC400BA9898 /* SceneDelegate.swift */; };
-		86A2FCE82545DAC400BA9898 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FCE72545DAC400BA9898 /* ContentView.swift */; };
 		86A2FCEA2545DAC600BA9898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A2FCE92545DAC600BA9898 /* Assets.xcassets */; };
 		86A2FCED2545DAC600BA9898 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A2FCEC2545DAC600BA9898 /* Preview Assets.xcassets */; };
 		86A2FCF02545DAC600BA9898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A2FCEE2545DAC600BA9898 /* LaunchScreen.storyboard */; };
+		86A2FCFE2545DB4000BA9898 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FCFD2545DB4000BA9898 /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		86A2FCE02545DAC400BA9898 /* Uber_Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uber_Clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A2FCE32545DAC400BA9898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86A2FCE52545DAC400BA9898 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86A2FCE72545DAC400BA9898 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		86A2FCE92545DAC600BA9898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86A2FCEC2545DAC600BA9898 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		86A2FCEF2545DAC600BA9898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86A2FCF12545DAC600BA9898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86A2FCFD2545DB4000BA9898 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +56,13 @@
 		86A2FCE22545DAC400BA9898 /* Uber_Clone */ = {
 			isa = PBXGroup;
 			children = (
+				86A2FCFC2545DB2700BA9898 /* Utils */,
+				86A2FCFB2545DB1100BA9898 /* Service */,
+				86A2FCFA2545DB0900BA9898 /* Controller */,
+				86A2FCF92545DB0500BA9898 /* View */,
+				86A2FCF82545DB0000BA9898 /* Model */,
 				86A2FCE32545DAC400BA9898 /* AppDelegate.swift */,
 				86A2FCE52545DAC400BA9898 /* SceneDelegate.swift */,
-				86A2FCE72545DAC400BA9898 /* ContentView.swift */,
 				86A2FCE92545DAC600BA9898 /* Assets.xcassets */,
 				86A2FCEE2545DAC600BA9898 /* LaunchScreen.storyboard */,
 				86A2FCF12545DAC600BA9898 /* Info.plist */,
@@ -73,6 +77,42 @@
 				86A2FCEC2545DAC600BA9898 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		86A2FCF82545DB0000BA9898 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		86A2FCF92545DB0500BA9898 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86A2FCFA2545DB0900BA9898 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				86A2FCFD2545DB4000BA9898 /* LoginController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		86A2FCFB2545DB1100BA9898 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		86A2FCFC2545DB2700BA9898 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				86A2FCE42545DAC400BA9898 /* AppDelegate.swift in Sources */,
+				86A2FCFE2545DB4000BA9898 /* LoginController.swift in Sources */,
 				86A2FCE62545DAC400BA9898 /* SceneDelegate.swift in Sources */,
-				86A2FCE82545DAC400BA9898 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
