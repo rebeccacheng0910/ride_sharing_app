@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/xinyicheng/Desktop/Udemy/Uber_Clone/Ride_Share_App.xcodeproj">
    </FileRef>
 </Workspace>

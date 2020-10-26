@@ -13,10 +13,13 @@
 		86A2FCED2545DAC600BA9898 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A2FCEC2545DAC600BA9898 /* Preview Assets.xcassets */; };
 		86A2FCF02545DAC600BA9898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A2FCEE2545DAC600BA9898 /* LaunchScreen.storyboard */; };
 		86A2FCFE2545DB4000BA9898 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FCFD2545DB4000BA9898 /* LoginController.swift */; };
+		86A2FD022546904000BA9898 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD012546904000BA9898 /* Extensions.swift */; };
+		86A2FD0625477A9F00BA9898 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD0525477A9F00BA9898 /* SignUpController.swift */; };
+		86A2FD0A25478ABB00BA9898 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD0925478ABB00BA9898 /* AuthButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		86A2FCE02545DAC400BA9898 /* Uber_Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uber_Clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86A2FCE02545DAC400BA9898 /* Ride_Share_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ride_Share_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A2FCE32545DAC400BA9898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86A2FCE52545DAC400BA9898 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		86A2FCE92545DAC600BA9898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		86A2FCEF2545DAC600BA9898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86A2FCF12545DAC600BA9898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A2FCFD2545DB4000BA9898 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		86A2FD012546904000BA9898 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		86A2FD0525477A9F00BA9898 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		86A2FD0925478ABB00BA9898 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +46,7 @@
 		86A2FCD72545DAC400BA9898 = {
 			isa = PBXGroup;
 			children = (
-				86A2FCE22545DAC400BA9898 /* Uber_Clone */,
+				86A2FCE22545DAC400BA9898 /* Ride_Share_App */,
 				86A2FCE12545DAC400BA9898 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +54,12 @@
 		86A2FCE12545DAC400BA9898 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				86A2FCE02545DAC400BA9898 /* Uber_Clone.app */,
+				86A2FCE02545DAC400BA9898 /* Ride_Share_App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		86A2FCE22545DAC400BA9898 /* Uber_Clone */ = {
+		86A2FCE22545DAC400BA9898 /* Ride_Share_App */ = {
 			isa = PBXGroup;
 			children = (
 				86A2FCFC2545DB2700BA9898 /* Utils */,
@@ -68,7 +74,7 @@
 				86A2FCF12545DAC600BA9898 /* Info.plist */,
 				86A2FCEB2545DAC600BA9898 /* Preview Content */,
 			);
-			path = Uber_Clone;
+			path = Ride_Share_App;
 			sourceTree = "<group>";
 		};
 		86A2FCEB2545DAC600BA9898 /* Preview Content */ = {
@@ -89,6 +95,7 @@
 		86A2FCF92545DB0500BA9898 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86A2FD0925478ABB00BA9898 /* AuthButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				86A2FCFD2545DB4000BA9898 /* LoginController.swift */,
+				86A2FD0525477A9F00BA9898 /* SignUpController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -111,6 +119,7 @@
 		86A2FCFC2545DB2700BA9898 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				86A2FD012546904000BA9898 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -118,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		86A2FCDF2545DAC400BA9898 /* Uber_Clone */ = {
+		86A2FCDF2545DAC400BA9898 /* Ride_Share_App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 86A2FCF42545DAC600BA9898 /* Build configuration list for PBXNativeTarget "Uber_Clone" */;
+			buildConfigurationList = 86A2FCF42545DAC600BA9898 /* Build configuration list for PBXNativeTarget "Ride_Share_App" */;
 			buildPhases = (
 				86A2FCDC2545DAC400BA9898 /* Sources */,
 				86A2FCDD2545DAC400BA9898 /* Frameworks */,
@@ -130,9 +139,9 @@
 			);
 			dependencies = (
 			);
-			name = Uber_Clone;
+			name = Ride_Share_App;
 			productName = Uber_Clone;
-			productReference = 86A2FCE02545DAC400BA9898 /* Uber_Clone.app */;
+			productReference = 86A2FCE02545DAC400BA9898 /* Ride_Share_App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,7 +158,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 86A2FCDB2545DAC400BA9898 /* Build configuration list for PBXProject "Uber_Clone" */;
+			buildConfigurationList = 86A2FCDB2545DAC400BA9898 /* Build configuration list for PBXProject "Ride_Share_App" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -162,7 +171,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				86A2FCDF2545DAC400BA9898 /* Uber_Clone */,
+				86A2FCDF2545DAC400BA9898 /* Ride_Share_App */,
 			);
 		};
 /* End PBXProject section */
@@ -185,9 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A2FD0625477A9F00BA9898 /* SignUpController.swift in Sources */,
 				86A2FCE42545DAC400BA9898 /* AppDelegate.swift in Sources */,
+				86A2FD0A25478ABB00BA9898 /* AuthButton.swift in Sources */,
 				86A2FCFE2545DB4000BA9898 /* LoginController.swift in Sources */,
 				86A2FCE62545DAC400BA9898 /* SceneDelegate.swift in Sources */,
+				86A2FD022546904000BA9898 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,10 +339,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Uber_Clone/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = Ride_Share_App;
 				DEVELOPMENT_TEAM = 5R6F3MNQQU;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Uber_Clone/Info.plist;
+				INFOPLIST_FILE = Ride_Share_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,10 +360,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Uber_Clone/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = Ride_Share_App;
 				DEVELOPMENT_TEAM = 5R6F3MNQQU;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Uber_Clone/Info.plist;
+				INFOPLIST_FILE = Ride_Share_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,7 +378,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		86A2FCDB2545DAC400BA9898 /* Build configuration list for PBXProject "Uber_Clone" */ = {
+		86A2FCDB2545DAC400BA9898 /* Build configuration list for PBXProject "Ride_Share_App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				86A2FCF22545DAC600BA9898 /* Debug */,
@@ -375,7 +387,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		86A2FCF42545DAC600BA9898 /* Build configuration list for PBXNativeTarget "Uber_Clone" */ = {
+		86A2FCF42545DAC600BA9898 /* Build configuration list for PBXNativeTarget "Ride_Share_App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				86A2FCF52545DAC600BA9898 /* Debug */,
