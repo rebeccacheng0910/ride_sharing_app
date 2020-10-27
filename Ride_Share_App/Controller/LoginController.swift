@@ -84,7 +84,11 @@ class LoginController: UIViewController {
                 print("Failed to log user in with error \(error.localizedDescription).")
                 return
             }
-            print("Successfully log user in.")
+            
+            guard let controller = UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController as?
+                    HomeController else { return }
+            controller.configureUI()
+            self.dismiss(animated: true, completion: nil)
         }
     }
     // MARK: Helper

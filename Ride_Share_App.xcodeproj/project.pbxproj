@@ -17,6 +17,7 @@
 		86A2FD0625477A9F00BA9898 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD0525477A9F00BA9898 /* SignUpController.swift */; };
 		86A2FD0A25478ABB00BA9898 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD0925478ABB00BA9898 /* AuthButton.swift */; };
 		86A2FD342547991F00BA9898 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86A2FD332547991F00BA9898 /* GoogleService-Info.plist */; };
+		86A2FD5B2547D7D100BA9898 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD5A2547D7D100BA9898 /* HomeController.swift */; };
 		EF67AD272F95A2AB092250C4 /* Pods_Ride_Share_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E5CC79E60F6E9603374D6A /* Pods_Ride_Share_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		86A2FD0525477A9F00BA9898 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		86A2FD0925478ABB00BA9898 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		86A2FD332547991F00BA9898 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		86A2FD5A2547D7D100BA9898 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		9470CDAC6868769590439DB4 /* Pods-Ride_Share_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ride_Share_App.debug.xcconfig"; path = "Target Support Files/Pods-Ride_Share_App/Pods-Ride_Share_App.debug.xcconfig"; sourceTree = "<group>"; };
 		B2E5CC79E60F6E9603374D6A /* Pods_Ride_Share_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ride_Share_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 			children = (
 				86A2FCFD2545DB4000BA9898 /* LoginController.swift */,
 				86A2FD0525477A9F00BA9898 /* SignUpController.swift */,
+				86A2FD5A2547D7D100BA9898 /* HomeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				86A2FD0625477A9F00BA9898 /* SignUpController.swift in Sources */,
 				86A2FCE42545DAC400BA9898 /* AppDelegate.swift in Sources */,
+				86A2FD5B2547D7D100BA9898 /* HomeController.swift in Sources */,
 				86A2FD0A25478ABB00BA9898 /* AuthButton.swift in Sources */,
 				86A2FCFE2545DB4000BA9898 /* LoginController.swift in Sources */,
 				86A2FCE62545DAC400BA9898 /* SceneDelegate.swift in Sources */,
