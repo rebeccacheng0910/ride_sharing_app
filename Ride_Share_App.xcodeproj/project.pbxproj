@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,9 +16,12 @@
 		86A2FD022546904000BA9898 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD012546904000BA9898 /* Extensions.swift */; };
 		86A2FD0625477A9F00BA9898 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD0525477A9F00BA9898 /* SignUpController.swift */; };
 		86A2FD0A25478ABB00BA9898 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD0925478ABB00BA9898 /* AuthButton.swift */; };
+		86A2FD342547991F00BA9898 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86A2FD332547991F00BA9898 /* GoogleService-Info.plist */; };
+		EF67AD272F95A2AB092250C4 /* Pods_Ride_Share_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E5CC79E60F6E9603374D6A /* Pods_Ride_Share_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3795C63B953BB5BB2D810233 /* Pods-Ride_Share_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ride_Share_App.release.xcconfig"; path = "Target Support Files/Pods-Ride_Share_App/Pods-Ride_Share_App.release.xcconfig"; sourceTree = "<group>"; };
 		86A2FCE02545DAC400BA9898 /* Ride_Share_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ride_Share_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A2FCE32545DAC400BA9898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86A2FCE52545DAC400BA9898 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		86A2FD012546904000BA9898 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		86A2FD0525477A9F00BA9898 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		86A2FD0925478ABB00BA9898 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		86A2FD332547991F00BA9898 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9470CDAC6868769590439DB4 /* Pods-Ride_Share_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ride_Share_App.debug.xcconfig"; path = "Target Support Files/Pods-Ride_Share_App/Pods-Ride_Share_App.debug.xcconfig"; sourceTree = "<group>"; };
+		B2E5CC79E60F6E9603374D6A /* Pods_Ride_Share_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ride_Share_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF67AD272F95A2AB092250C4 /* Pods_Ride_Share_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B5D9571B92898CCF761573B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9470CDAC6868769590439DB4 /* Pods-Ride_Share_App.debug.xcconfig */,
+				3795C63B953BB5BB2D810233 /* Pods-Ride_Share_App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5F759F4E23749BA1184E019E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2E5CC79E60F6E9603374D6A /* Pods_Ride_Share_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		86A2FCD72545DAC400BA9898 = {
 			isa = PBXGroup;
 			children = (
 				86A2FCE22545DAC400BA9898 /* Ride_Share_App */,
 				86A2FCE12545DAC400BA9898 /* Products */,
+				2B5D9571B92898CCF761573B /* Pods */,
+				5F759F4E23749BA1184E019E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +98,7 @@
 				86A2FCE92545DAC600BA9898 /* Assets.xcassets */,
 				86A2FCEE2545DAC600BA9898 /* LaunchScreen.storyboard */,
 				86A2FCF12545DAC600BA9898 /* Info.plist */,
+				86A2FD332547991F00BA9898 /* GoogleService-Info.plist */,
 				86A2FCEB2545DAC600BA9898 /* Preview Content */,
 			);
 			path = Ride_Share_App;
@@ -131,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86A2FCF42545DAC600BA9898 /* Build configuration list for PBXNativeTarget "Ride_Share_App" */;
 			buildPhases = (
+				5C255120430BFDEC8D5E1C88 /* [CP] Check Pods Manifest.lock */,
 				86A2FCDC2545DAC400BA9898 /* Sources */,
 				86A2FCDD2545DAC400BA9898 /* Frameworks */,
 				86A2FCDE2545DAC400BA9898 /* Resources */,
+				91CC0B4E0B6692E3E06BEEDB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,12 +211,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				86A2FCF02545DAC600BA9898 /* LaunchScreen.storyboard in Resources */,
+				86A2FD342547991F00BA9898 /* GoogleService-Info.plist in Resources */,
 				86A2FCED2545DAC600BA9898 /* Preview Assets.xcassets in Resources */,
 				86A2FCEA2545DAC600BA9898 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C255120430BFDEC8D5E1C88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ride_Share_App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91CC0B4E0B6692E3E06BEEDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ride_Share_App/Pods-Ride_Share_App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ride_Share_App/Pods-Ride_Share_App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ride_Share_App/Pods-Ride_Share_App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86A2FCDC2545DAC400BA9898 /* Sources */ = {
@@ -335,6 +407,7 @@
 		};
 		86A2FCF52545DAC600BA9898 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9470CDAC6868769590439DB4 /* Pods-Ride_Share_App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,7 +420,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "RebeccaCheng.Uber-Clone";
+				PRODUCT_BUNDLE_IDENTIFIER = RebeccaCheng.RideShareApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,6 +429,7 @@
 		};
 		86A2FCF62545DAC600BA9898 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3795C63B953BB5BB2D810233 /* Pods-Ride_Share_App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -368,7 +442,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "RebeccaCheng.Uber-Clone";
+				PRODUCT_BUNDLE_IDENTIFIER = RebeccaCheng.RideShareApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

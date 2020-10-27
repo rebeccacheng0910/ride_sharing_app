@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
     
@@ -43,6 +44,7 @@ class LoginController: UIViewController {
         let button = AuthButton(type: .system)
         button.setTitle("Log In", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
@@ -60,7 +62,6 @@ class LoginController: UIViewController {
         return button
     }()
     
-    
     // MARK: LifeCycle
     
     override func viewDidLoad() {
@@ -75,6 +76,17 @@ class LoginController: UIViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
     
+    @objc func handleLogin(){
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("Failed to log user in with error \(error.localizedDescription).")
+                return
+            }
+            print("Successfully log user in.")
+        }
+    }
     // MARK: Helper
     
     func configureUI() {
@@ -97,7 +109,7 @@ class LoginController: UIViewController {
         stackView.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor,
                                             paddingTop: 40, paddingLeft: 16, paddingRight: 16)
         
-        doNotHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, height: 32)
+        doNotHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: 32)
         doNotHaveAccountButton.centerX(inview: view)
     }
     

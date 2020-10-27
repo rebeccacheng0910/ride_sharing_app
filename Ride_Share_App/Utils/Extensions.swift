@@ -33,8 +33,8 @@ extension UIView {
             
             view.addSubview(textField)
             textField.centerY(inview: view)
-            textField.anchor(left: imageView.rightAnchor, bottom: view.bottomAnchor, right: view.rightAnchor,
-                                  paddingLeft: 8, paddingBottom: 8, paddingRight: 8)
+            textField.anchor(left: imageView.rightAnchor, bottom: view.bottomAnchor,
+                                  paddingLeft: 8, paddingBottom: 8)
         }
         
         if let segmentedControl = segmentedControl {
@@ -42,16 +42,16 @@ extension UIView {
                              paddingTop: -8, paddingLeft: 8, width: 24, height: 24)
             
             view.addSubview(segmentedControl)
+            segmentedControl.centerY(inview: view, constant: 8)
             segmentedControl.anchor(left: view.leftAnchor, right: view.rightAnchor,
                                     paddingLeft: 8, paddingRight: 8)
-            segmentedControl.centerY(inview: view, constant: 8)
         }
         
         let seperatorView = UIView()
         seperatorView.backgroundColor = .lightGray
         view.addSubview(seperatorView)
-        seperatorView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor,
-                             paddingLeft: 8, height: 0.75)
+        seperatorView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor,
+                             right: view.rightAnchor, paddingLeft: 8, height: 0.75)
         
         return view
     }
@@ -95,10 +95,12 @@ extension UIView {
     }
     
     func centerX(inview view: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
         centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
     func centerY(inview view: UIView, constant: CGFloat = 0) {
+        translatesAutoresizingMaskIntoConstraints = false
         centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant).isActive = true
     }
 }

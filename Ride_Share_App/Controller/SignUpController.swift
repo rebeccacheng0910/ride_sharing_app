@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpController: UIViewController {
     
@@ -66,6 +67,7 @@ class SignUpController: UIViewController {
         let button = AuthButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         return button
     }()
     
@@ -96,6 +98,31 @@ class SignUpController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @objc func handleSignUp() {
+        
+        guard let email = emailTextField.text else { return }
+        guard let fullname = fullnameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        let accountTypeIndex = accountTypeSegmentedControl.selectedSegmentIndex
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("Failed with register user with error \(error)")
+                return
+            }
+            guard let uid = result?.user.uid else { return }
+            let values = ["email": email,
+                          "fullname": fullname,
+                          "accountType": accountTypeIndex] as [String : Any]
+            Database.database().reference().child("users").child(uid).updateChildValues(values) { (error, ref) in
+                print("Successfully registerd user and saved data.")
+            }
+            
+            
+            
+        }
+    }
+    
     // MARK: Helper
     
     func configureUI() {
@@ -118,7 +145,7 @@ class SignUpController: UIViewController {
         stackView.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor,
                                             paddingTop: 40, paddingLeft: 16, paddingRight: 16)
         
-        alreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+        alreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: 32)
         alreadyHaveAccountButton.centerX(inview: view)
     }
     
