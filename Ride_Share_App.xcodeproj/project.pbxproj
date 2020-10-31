@@ -21,6 +21,8 @@
 		86C1F30E254C8C9D006D6A41 /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1F30D254C8C9D006D6A41 /* LocationInputActivationView.swift */; };
 		86C1F311254CAD66006D6A41 /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1F310254CAD66006D6A41 /* LocationInputView.swift */; };
 		86C1F314254D0EAD006D6A41 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1F313254D0EAC006D6A41 /* LocationCell.swift */; };
+		86C1F317254D24CE006D6A41 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1F316254D24CE006D6A41 /* Service.swift */; };
+		86C1F31A254D2DF2006D6A41 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1F319254D2DF2006D6A41 /* User.swift */; };
 		EF67AD272F95A2AB092250C4 /* Pods_Ride_Share_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E5CC79E60F6E9603374D6A /* Pods_Ride_Share_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		86C1F30D254C8C9D006D6A41 /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
 		86C1F310254CAD66006D6A41 /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
 		86C1F313254D0EAC006D6A41 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		86C1F316254D24CE006D6A41 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		86C1F319254D2DF2006D6A41 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9470CDAC6868769590439DB4 /* Pods-Ride_Share_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ride_Share_App.debug.xcconfig"; path = "Target Support Files/Pods-Ride_Share_App/Pods-Ride_Share_App.debug.xcconfig"; sourceTree = "<group>"; };
 		B2E5CC79E60F6E9603374D6A /* Pods_Ride_Share_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ride_Share_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +127,7 @@
 		86A2FCF82545DB0000BA9898 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				86C1F319254D2DF2006D6A41 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 		86A2FCFB2545DB1100BA9898 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				86C1F316254D24CE006D6A41 /* Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -286,6 +292,8 @@
 				86A2FCFE2545DB4000BA9898 /* LoginController.swift in Sources */,
 				86C1F314254D0EAD006D6A41 /* LocationCell.swift in Sources */,
 				86A2FCE62545DAC400BA9898 /* SceneDelegate.swift in Sources */,
+				86C1F31A254D2DF2006D6A41 /* User.swift in Sources */,
+				86C1F317254D24CE006D6A41 /* Service.swift in Sources */,
 				86C1F30E254C8C9D006D6A41 /* LocationInputActivationView.swift in Sources */,
 				86A2FD022546904000BA9898 /* Extensions.swift in Sources */,
 			);
