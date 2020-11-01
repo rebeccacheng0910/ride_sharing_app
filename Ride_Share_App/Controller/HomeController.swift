@@ -36,14 +36,23 @@ class HomeController: UIViewController {
         checkIfUserIdLoggedIn()
         enableLocationServices()
         fetchUserData()
-        signOut()
+        fetchDrivers()
+        // signOut()
     }
     
     // MARK: API
     
     func fetchUserData() {
-        Service.shared.fetchUserData { user in
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        Service.shared.fetchUserData(uid: currentUid) { user in
             self.user = user
+        }
+    }
+    
+    func fetchDrivers() {
+        guard let location = locationManager?.location else { return }
+        Service.shared.fetchDrivers(location: location) { (user) in
+            print("DEBUG: \(user.location)")
         }
     }
     
@@ -129,17 +138,20 @@ class HomeController: UIViewController {
 
 // MARK: Location Services
 
-extension HomeController {
+extension HomeController: CLLocationManagerDelegate {
     
     func enableLocationServices() {
+        locationManager?.delegate = self
+        
         switch locationManager?.authorizationStatus {
         case .notDetermined:
             locationManager?.requestWhenInUseAuthorization()
         case .authorizedWhenInUse:
             locationManager?.requestAlwaysAuthorization()
-        case .authorizedAlways:
             locationManager?.startUpdatingLocation()
             locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        case .authorizedAlways:
+            locationManager?.startUpdatingLocation()
         case .denied, .restricted, .none:
             break
         @unknown default:
