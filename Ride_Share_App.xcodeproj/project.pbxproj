@@ -18,6 +18,7 @@
 		86A2FD0A25478ABB00BA9898 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD0925478ABB00BA9898 /* AuthButton.swift */; };
 		86A2FD342547991F00BA9898 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86A2FD332547991F00BA9898 /* GoogleService-Info.plist */; };
 		86A2FD5B2547D7D100BA9898 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FD5A2547D7D100BA9898 /* HomeController.swift */; };
+		86B69B38254E6C6300778498 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B69B37254E6C6300778498 /* DriverAnnotation.swift */; };
 		86C1F30E254C8C9D006D6A41 /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1F30D254C8C9D006D6A41 /* LocationInputActivationView.swift */; };
 		86C1F311254CAD66006D6A41 /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1F310254CAD66006D6A41 /* LocationInputView.swift */; };
 		86C1F314254D0EAD006D6A41 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1F313254D0EAC006D6A41 /* LocationCell.swift */; };
@@ -42,6 +43,7 @@
 		86A2FD0925478ABB00BA9898 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		86A2FD332547991F00BA9898 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		86A2FD5A2547D7D100BA9898 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		86B69B37254E6C6300778498 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		86C1F30D254C8C9D006D6A41 /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
 		86C1F310254CAD66006D6A41 /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
 		86C1F313254D0EAC006D6A41 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				86C1F319254D2DF2006D6A41 /* User.swift */,
+				86B69B37254E6C6300778498 /* DriverAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				86A2FCE42545DAC400BA9898 /* AppDelegate.swift in Sources */,
 				86A2FD5B2547D7D100BA9898 /* HomeController.swift in Sources */,
 				86C1F311254CAD66006D6A41 /* LocationInputView.swift in Sources */,
+				86B69B38254E6C6300778498 /* DriverAnnotation.swift in Sources */,
 				86A2FD0A25478ABB00BA9898 /* AuthButton.swift in Sources */,
 				86A2FCFE2545DB4000BA9898 /* LoginController.swift in Sources */,
 				86C1F314254D0EAD006D6A41 /* LocationCell.swift in Sources */,
