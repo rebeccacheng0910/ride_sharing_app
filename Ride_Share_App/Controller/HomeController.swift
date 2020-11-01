@@ -16,7 +16,7 @@ class HomeController: UIViewController {
     // MARK: Properties
     
     private let mapView = MKMapView()
-    private let locationManager = CLLocationManager()
+    private let locationManager = LocationHandler.shared.locationManager
     
     private let inputActivationView = LocationInputActivationView()
     private let locationInputView = LocationInputView()
@@ -36,7 +36,7 @@ class HomeController: UIViewController {
         checkIfUserIdLoggedIn()
         enableLocationServices()
         fetchUserData()
-        // signOut()
+        signOut()
     }
     
     // MARK: API
@@ -62,6 +62,11 @@ class HomeController: UIViewController {
     func signOut() {
         do {
             try Auth.auth().signOut()
+            DispatchQueue.main.async {
+                let nav = UINavigationController(rootViewController: LoginController())
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
+            }
         } catch {
             print("Error signing out")
         }
@@ -124,20 +129,18 @@ class HomeController: UIViewController {
 
 // MARK: Location Services
 
-extension HomeController: CLLocationManagerDelegate {
+extension HomeController {
     
     func enableLocationServices() {
-        locationManager.delegate = self
-        
-        switch locationManager.authorizationStatus {
+        switch locationManager?.authorizationStatus {
         case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
+            locationManager?.requestWhenInUseAuthorization()
         case .authorizedWhenInUse:
-            locationManager.requestAlwaysAuthorization()
+            locationManager?.requestAlwaysAuthorization()
         case .authorizedAlways:
-            locationManager.startUpdatingLocation()
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        case .denied, .restricted:
+            locationManager?.startUpdatingLocation()
+            locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        case .denied, .restricted, .none:
             break
         @unknown default:
             break

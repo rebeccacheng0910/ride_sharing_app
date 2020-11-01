@@ -7,10 +7,14 @@
 
 import UIKit
 import Firebase
+import GeoFire
 
 class SignUpController: UIViewController {
     
     // MARK: Properties
+    
+    private var location = LocationHandler.shared.locationManager.location
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "RIDE"
@@ -114,12 +118,16 @@ class SignUpController: UIViewController {
             let values = ["email": email,
                           "fullname": fullname,
                           "accountType": accountTypeIndex] as [String : Any]
-            Database.database().reference().child("users").child(uid).updateChildValues(values) { (error, ref) in
-                guard let controller = UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController as?
-                        HomeController else { return }
-                controller.configureUI()
-                self.dismiss(animated: true, completion: nil)
+            
+            if accountTypeIndex == 1 {
+                let geoFire = GeoFire(firebaseRef: REF_DRIVER_LOCATIONS)
+                guard let location = self.location else { return }
+                geoFire.setLocation(location, forKey: uid) { (error) in
+                    self.uploadUserDataAndShowHomeController(uid: uid, values: values)
+                }
             }
+            
+            self.uploadUserDataAndShowHomeController(uid: uid, values: values)
         }
     }
     
@@ -147,6 +155,15 @@ class SignUpController: UIViewController {
         
         alreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: 32)
         alreadyHaveAccountButton.centerX(inview: view)
+    }
+    
+    func uploadUserDataAndShowHomeController(uid: String, values: [String: Any]){
+        REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
+            guard let controller = UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController as?
+                    HomeController else { return }
+            controller.configureUI()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
 }
